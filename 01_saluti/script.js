@@ -6,9 +6,18 @@ const userName = 'Mario';
 
 // Dichiara la funzione qui.
 
+const inputName = () => {
+    
+    const result = 'Ciao ' + userName;
+
+    return result
+    
+}
+
 
 // Invoca la funzione qui e stampa il risultato in console
 
+console.log(inputName());
 
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
