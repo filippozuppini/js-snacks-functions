@@ -13,16 +13,39 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
-function hello (name){
-
-    const saluto = name + ''
-
-    const data = new Date();
-    const ore = data.getHours();
-
+function sayHello (nome){
     
+    const d = new Date();
+    let hour = d.getHours();
+
+    let saluto = '';
+
+    if (hour <= 13) {
+        // console.log(`Buongiorno ${nome}`);
+
+        saluto = `Buongiorno ${nome}`;
+        
+    } else if (hour <= 17) {
+        // console.log(`Buon pomeriggio ${nome}`);
+        saluto = `Buon pomeriggio ${nome}`;
+
+    } else {
+        // console.log(`Buonasera ${nome}`);
+        saluto = `Buonasera ${nome}`;
+
+    }
+
+    return saluto;
+
 
 }
+
+console.log(sayHello(name));
+
+
+
+
+
 
 
 // Invoca la funzione qui e stampa il risultato in console
